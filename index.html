@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPEK GIDA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="logo">
+            <a href="#"><img src="görseller/logo.png" alt="UPEK GIDA Logo"></a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Anasayfa</a></li>
+            <li><a href="kurumsal.html">Kurumsal</a></li>
+            <li><a href="urunlerimiz.html">Ürünlerimiz</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="carousel">
+            <div class="slides">
+                <img src="görseller/Image 3.webp" alt="Ürün 1" class="active">
+                <img src="görseller/tahiniii.tiff" alt="Ürün 2">
+                <img src="görseller/Image 6 kopyası 2.tiff" alt="Ürün 3">
+                <img src="görseller/varill.tiff" alt="Ürün 4">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <div class="section-title">
+            <h2>Ürünler</h2>
+        </div>
+        <p>Çukurova bölgesinin bereketli topraklarında yetişen meyveleri işleyerek %100 doğal ve katkısız olarak, herhangi bir koruyucu madde kullanmadan üretiyoruz.</p>
+        <a href="urunlerimiz.html" class="see-all">Tümü</a>
+    </div>
+
+    <div class="product-container">
+        <a href="urun_detay.html?id=1" class="product-card">
+            <img src="görseller/500 ml.png" alt="UPEK Harnup (Keçiboynuzu) Özü - 500 ml">
+            <div class="product-info">
+                <h3>UPEK Harnup (Keçiboynuzu) Özü - 500 ml</h3>
+            </div>
+        </a>
+        <a href="urun_detay.html?id=2" class="product-card">
+            <img src="görseller/andız.png" alt="UPEK Andız Özü - 250 ml">
+            <div class="product-info">
+                <h3>UPEK Andız Özü - 250 ml</h3>
+            </div>
+        </a>
+        <a href="urun_detay.html?id=3" class="product-card">
+            <img src="görseller/tahinli.png" alt="UPEK Harnup (Keçiboynuzu) Özü - Tahinli 330 gr">
+            <div class="product-info">
+                <h3>UPEK Harnup (Keçiboynuzu) Özü - Tahinli 330 gr</h3>
+            </div>
+        </a>
+        <a href="urun_detay.html?id=4" class="product-card">
+            <img src="görseller/500 ml.png" alt="UPEK Harnup (Keçiboynuzu) Özü - 250 ml">
+            <div class="product-info">
+                <h3>UPEK Harnup (Keçiboynuzu) Özü - 250 ml</h3>
+            </div>
+        </a>
+        <a href="urun_detay.html?id=5" class="product-card">
+            <img src="görseller/greyfurt.webp" alt="Greyfurt Suyu Konsantresi">
+            <div class="product-info">
+                <h3>Greyfurt Suyu Konsantresi</h3>
+                <p>Fiyat teklifi alın</p>  
+            </div>
+        </a>
+        <a href="urun_detay.html?id=6" class="product-card">
+            <img src="görseller/limon.jpg" alt="Limon Suyu Konsantresi">
+            <div class="product-info">
+                <h3>Limon Suyu Konsantresi</h3>
+                <p>Fiyat teklifi alın</p>  
+            </div>
+        </a>
+        <a href="urun_detay.html?id=7" class="product-card">
+            <img src="görseller/portakal.png" alt="Portakal Suyu Konsantresi">
+            <div class="product-info">
+                <h3>Portakal Suyu Konsantresi</h3>
+                <p>Fiyat teklifi alın</p>  
+            </div>
+        </a>
+        <a href="urun_detay.html?id=8" class="product-card">
+            <img src="görseller/nar.jpg" alt="Nar Suyu Konsantresi">
+            <div class="product-info">
+                <h3>Nar Suyu Konsantresi</h3>
+                <p>Fiyat teklifi alın</p>  
+            </div>
+        </a>
+    </div>
+
+    <div class="history-section">
+        <h2>Tarihimiz</h2>
+        <div class="history-content">
+            <img src="görseller/fabrika.webp" alt="Fabrikamız" class="history-image">
+            <div class="history-text">
+                <p>UPEK GIDA, uzun yıllardır sektöründe öncü konumda olup, müşteri memnuniyeti ve kaliteyi ön planda tutarak faaliyetlerine devam etmektedir. Şirketimiz, 2008 yılında kurulmuş olup, o günden bugüne sürekli olarak büyüme ve gelişme göstermiştir.</p>
+                <a href="#" class="history-link">Detaylar</a>
+            </div>
+        </div>
+        <img src="görseller/portakal.png" alt="Domates" class="history-decoration">
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html"><img src="görseller/logo.png" alt="UPEK GIDA Logo"></a>
+            </div>
+            <p>&copy; 2024 UPEK GIDA. Tüm hakları saklıdır.</p>
+            <ul class="footer-links">
+                <li><a href="#">Gizlilik Politikası</a></li>
+                <li><a href="#">Kullanım Şartları</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UPEK GIDA</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="görseller/logo.png" alt="UPEK GIDA Logo"></a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="kurumsal.html">Kurumsal</a></li>
+            <li><a href="urunlerimiz.html">Ürünlerimiz</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="section-header">
+            <div class="section-title">
+                <h2>İletişim</h2>
+            </div>
+            <p>Bize ulaşmak için aşağıdaki formu doldurabilirsiniz.</p>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="contact-info-section">
+            <h2>İletişim Bilgileri</h2>
+            <p>Upek Gıda üretmiş olduğu ürünlerle ulusal ve uluslararası pazarlarda boy gösteren bir kuruluştur</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <h3>OSMANİYE FABRİKA</h3>
+                    <p>Organize sanayi bölgesi 2. sk. no:8 Kadirli, 80008 Kadirli/Osmaniye</p>
+                    <p>03287392019</p>
+                    <p>info@upek.com.tr</p>
+                </div>
+                <div class="contact-card">
+                    <h3>SATIN ALMA</h3>
+                    <p>MUHAMMET MUSTAFA UZUNDAL</p>
+                    <p>+90 (536) 916 55 21</p>
+                    <p>uzundalmustafa811@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3>MÜŞTERİ HİZMETLERİ</h3>
+                    <p>MAHMUT ESAT UZUNDAL</p>
+                    <p>+90 (537) 512 91 58</p>
+                    <p>esad3358@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3>MARMARA BÖLGE SORUMLUSU</h3>
+                    <p>MAHMUT ESAT UZUNDAL</p>
+                    <p>+90 (537) 512 91 58</p>
+                    <p>esad3358@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3>İÇ ANADOLU BÖLGE SORUMLUSU</h3>
+                    <p>MUHAMMET MUSTAFA UZUNDAL</p>
+                    <p>+90 (536) 916 55 21</p>
+                    <p>uzundalmustafa811@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3>AKDENİZ BÖLGE SORUMLUSU</h3>
+                    <p>MUHAMMET MUSTAFA UZUNDAL</p>
+                    <p>+90 (536) 916 55 21</p>
+                    <p>uzundalmustafa811@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Map Section -->
+        <div class="map-section">
+            <h2>Haritada Biz</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.693171304594!2d36.06026777618015!3d37.42072657207685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152ec8ea09ff8877%3A0x78011284b227cc17!2sUPEK%20GIDA!5e0!3m2!1str!2str!4v1721392738173!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>   
+
+        <!-- Contact Form Section -->
+        <div class="contact-form-section">
+            <h2>Bize Yazın</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Adınız Soyadınız</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Adresiniz</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">Şehir</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon Numaranız</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html"><img src="görseller/logo.png" alt="UPEK GIDA Logo"></a>
+            </div>
+            <p>&copy; 2024 UPEK GIDA. Tüm hakları saklıdır.</p>
+            <ul class="footer-links">
+                <li><a href="#">Gizlilik Politikası</a></li>
+                <li><a href="#">Kullanım Şartları</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
