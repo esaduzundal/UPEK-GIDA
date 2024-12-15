@@ -1,4 +1,3 @@
-// urun_detay.js
 document.addEventListener('DOMContentLoaded', () => {
     const productDetailContainer = document.getElementById('product-detail');
     const urlParams = new URLSearchParams(window.location.search);
@@ -12,53 +11,64 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             name: 'UPEK Harnup (Keçiboynuzu) Özü - 500 ml',
             image: 'görseller/500 ml.png',
-            description: 'Akdeniz bölgesinde doğal olarak yetişen keçiboynuzu bitkisinin doğru türleri seçilerek meyvelerin vitamin, mineral ve diğer bileşenlerinin değişikliğe uğramaması için sırasıyla soğuk ekstraksiyon, pastörizasyon ve vakum altında düşük sıcaklıkta evaporasyon işlemi uygulanarak elde edilmiştir. İçindekiler: %100 doğal harnup meyvesidir. Koruyucu ve katkı maddesi içermez.'
+            description: 'Akdeniz bölgesinde doğal olarak yetişen keçiboynuzu bitkisinden elde edilen bu öz, soğuk ekstraksiyon yöntemi ile hazırlanmıştır. Katkı maddesi içermez.',
+            price: 'Fiyat teklifi alın'
         },
         {
             id: 2,
             name: 'UPEK Andız Özü - 250 ml',
             image: 'görseller/andız.png',
-            description: 'Doğal olarak yetişen andız bitkisinden elde edilen öz, çeşitli sağlık faydalarıyla bilinir. Soğuk sıkım yöntemiyle elde edilen bu öz, vitamin ve mineral bakımından zengindir.'
+            description: 'Doğal andız bitkisinden elde edilen bu öz, vitamin ve mineral bakımından zengin, sağlık dostu bir üründür.',
+            price: 'Fiyat teklifi alın'
         },
         {
             id: 3,
             name: 'UPEK Harnup (Keçiboynuzu) Özü - Tahinli 330 gr',
             image: 'görseller/tahinli.png',
-            description: 'Harnup ve tahinin muhteşem birleşimi ile elde edilen bu ürün, zengin besin değerleri ve eşsiz lezzeti ile sofralarınızı şenlendirir.'
+            description: 'Harnup ve tahin birleşiminden oluşan bu ürün, kahvaltılara eşsiz bir lezzet katar.',
+            price: 'Fiyat teklifi alın'
         },
         {
             id: 4,
             name: 'UPEK Harnup (Keçiboynuzu) Özü - 250 ml',
             image: 'görseller/500 ml.png',
-            description: 'Akdeniz bölgesinde doğal olarak yetişen keçiboynuzu bitkisinin özü, çeşitli sağlık faydaları sunar. Doğal ve katkısızdır.'
+            description: 'Keçiboynuzu bitkisinin özünden elde edilmiş, tamamen doğal bir üründür.',
+            price: 'Fiyat teklifi alın'
         },
         {
             id: 5,
             name: 'Greyfurt Suyu Konsantresi',
-            price: 'Fiyat teklifi alın',
-            image: 'görseller/greyfurt.webp',
-            description: 'Taze greyfurtlardan elde edilen bu konsantre, yoğun aroması ve zengin vitamin içeriği ile dikkat çeker.'
+            image: 'görseller/greyfurt.png',
+            description: 'Taze greyfurtlardan elde edilen bu konsantre, zengin aroması ve yüksek vitamin içeriği ile içecek ve gıda üretiminde ideal bir seçimdir. Ürünümüz %58-62 Brix değerine sahiptir ve -18°C’de saklanmalıdır. Endüstriyel müşterilerimizin ihtiyaçlarına göre özenle hazırlanmıştır.',
+            price: 'Fiyat teklifi alın'
         },
         {
             id: 6,
             name: 'Limon Suyu Konsantresi',
-            price: 'Fiyat teklifi alın',
-            image: 'görseller/limon.jpg',
-            description: 'Taze limonlardan elde edilen bu konsantre, yemekleriniz ve içecekleriniz için ideal bir lezzet kaynağıdır.'
+            image: 'görseller/limon.png',
+            description: 'Limon suyu konsantresi, taze limonların yoğunlaştırılmasıyla elde edilir. Zengin C vitamini içeriği ve güçlü asidik yapısı sayesinde içecek ve gıda endüstrisinde geniş kullanım alanına sahiptir. Ürün %48-52 Brix değerine sahiptir ve -18°C’de muhafaza edilmelidir. Endüstriyel müşteriler için özenle üretilmiştir.',
+            price: 'Fiyat teklifi alın'
         },
         {
             id: 7,
             name: 'Portakal Suyu Konsantresi',
-            price: 'Fiyat teklifi alın',
-            image: 'görseller/portakal.png',
-            description: 'Portakalın doğal tadını ve vitaminlerini sunan bu konsantre, içeceklerinizde ve tariflerinizde kullanmak için mükemmeldir.'
+            image: 'görseller/portakalvaril.png',
+            description: 'Taze portakallardan elde edilen bu konsantre, doğal tatlılığı ve zengin vitamin içeriği ile dikkat çeker. İçeriğinde %65-68 Brix değerine sahiptir ve -18°C’de saklanması önerilir. İçecek üretiminde ve tatlandırıcı olarak ideal bir tercihtir.',
+            price: 'Fiyat teklifi alın'
         },
         {
             id: 8,
             name: 'Nar Suyu Konsantresi',
-            price: 'Fiyat teklifi alın',
-            image: 'görseller/nar.jpg',
-            description: 'Taze narların konsantre edilmesiyle elde edilen bu ürün, güçlü antioksidan özellikleri ve eşsiz lezzeti ile bilinir.'
+            image: 'görseller/nar.png',
+            description: 'Taze narların konsantre edilmesiyle elde edilen nar suyu konsantresi, antioksidan özellikleri ve zengin aroması ile öne çıkar. %60-65 Brix değerine sahip olan bu ürün, içecek ve tatlı üretiminde yaygın olarak kullanılır. Ürün, -18°C’de saklanmalı ve endüstriyel standartlara uygun şekilde taşınmalıdır.',
+            price: 'Fiyat teklifi alın'
+        },
+        {
+            id: 9,
+            name: 'Keçiboynuzu Gamı',
+            image: 'görseller/gam.png',
+            description: 'Keçiboynuzu gamı, doğal bir kıvam artırıcı ve stabilizatör olarak gıda endüstrisinde yaygın şekilde kullanılan bir üründür. Ekmekçilik, dondurma, şekerleme ve süt ürünlerinde kullanılabilir. Ürün, %100 doğal keçiboynuzu çekirdeklerinden elde edilmiştir. Saklama koşulları: Serin, kuru bir yerde muhafaza edilmelidir. Nemden koruyunuz. Endüstriyel standartlara uygun olarak hazırlanmıştır.',
+            price: 'Fiyat teklifi alın'
         }
     ];
 

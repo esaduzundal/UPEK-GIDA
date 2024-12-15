@@ -1,3 +1,142 @@
+
+/* ============================= */
+/* Variables and General Settings */
+/* ============================= */
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: #007bff;
+    --text-color: #555;
+    --border-radius: 8px;
+    --transition: 0.3s ease;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================= */
+/* Global Defaults */
+/* ============================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* ============================= */
+/* Navbar Styles */
+/* ============================= */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================= */
+/* Carousel Styles */
+/* ============================= */
+.carousel-container {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slides img.active {
+    opacity: 1;
+}
+
+/* ============================= */
+/* Product Cards */
+/* ============================= */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 20px;
+    transition: var(--transition);
+    width: 250px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 200px;
+    margin-bottom: 15px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* Footer Styles */
+/* ============================= */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 20px;
+    margin-top: auto;
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .product-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 10px;
+    }
+
+    .product-card {
+        flex: 0 0 80%;
+    }
+}
+
+/* ============================= */
+/* Original CSS Content */
+/* ============================= */
+
 /* Existing styles... */
 
 body {
@@ -22,9 +161,9 @@ body {
 }
 
 .hamburger-menu {
+    display: none; /* MasaÃƒÂ¼stÃƒÂ¼nde gizli */
     font-size: 24px;
     cursor: pointer;
-    display: none;
 }
 
 .logo {
@@ -70,24 +209,25 @@ body {
 .nav-links a:hover {
     background-color: #575757;
     transform: scale(1.1);
-    border-radius: 8px; /* Köşeleri yuvarla */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Gölge ekle */
+    border-radius: 8px; /* KÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸eleri yuvarla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* GÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶lge ekle */
 }
 
+/* Mobil ekranlar iÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§in nav ve hamburger menÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼zenlemeleri */
+
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
     .hamburger-menu {
-        display: block;
+        display: block; /* Mobilde gÃƒÂ¶rÃƒÂ¼nÃƒÂ¼r */
+        margin-right: 10px; /* SaÃ„Å¸ tarafa biraz boÃ…Å¸luk bÃ„Â±rak */
+    }
+
+    .product-card {
+        flex: 0 0 80%; /* Kart geniÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸liÃƒÆ’Ã¢â‚¬ÂÃƒâ€¦Ã‚Â¸i ekranÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±n %80'i */
+        margin-right: 10px; /* Kartlar arasÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±na boÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸luk */
+    }
+
+    .product-list::-webkit-scrollbar {
+        display: none; /* Mobilde scrollbar'ÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± gizle */
     }
 }
 
@@ -106,8 +246,8 @@ body {
 .carousel {
     position: relative;
     width: 100%;
-    height: auto; /* İçeriğe göre ayarla */
-    padding-bottom: 56.25%; /* 16:9 oranında yer tutucu */
+    height: auto; /* ÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§eriÃƒÆ’Ã¢â‚¬ÂÃƒâ€¦Ã‚Â¸e gÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶re ayarla */
+    padding-bottom: 56.25%; /* 16:9 oranÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±nda yer tutucu */
 }
 
 .slides {
@@ -313,7 +453,7 @@ body {
 }
 
 .social-media a[href*="youtube"]:hover {
-    color: #FF0000; /* YouTube kırmızı */
+    color: #FF0000; /* YouTube kÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±rmÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±zÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± */
 }
 
 .social-media a[href*="linkedin"]:hover {
@@ -447,7 +587,7 @@ body {
         opacity: 1;
     }
     
-    /* İletişim Sayfası - styles.css */
+    /* ÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â°letiÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸im SayfasÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± - styles.css */
 .contact-info-section, .contact-form-section, .map-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -501,7 +641,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* İletişim Formu */
+/* ÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â°letiÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸im Formu */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -545,7 +685,7 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Responsive Tasarım */
+/* Responsive TasarÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±m */
 @media (max-width: 768px) {
     .contact-info-section, .contact-form-section, .map-section {
         padding: 15px;
@@ -587,7 +727,7 @@ button[type="submit"]:hover {
 }
 
 .about-content ul li:before {
-    content: "•";
+    content: "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢";
     position: absolute;
     left: 0;
     top: 0;
@@ -791,20 +931,20 @@ button[type="submit"]:hover {
     transition: background-color 0.3s ease-in-out;
 }
 /* Product Detail Styles */
-/* styles.css - Ürün Kartları İçin Güncellenmiş Kısım */
+/* styles.css - ÃƒÆ’Ã†â€™Ãƒâ€¦Ã¢â‚¬Å“rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼n KartlarÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± ÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§in GÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ncellenmiÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸ KÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±sÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±m */
 .product-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Kartlar arasındaki boşluk */
+    gap: 20px; /* Kartlar arasÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±ndaki boÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸luk */
 }
 
-/* styles.css - Ürün Kartları İçin Güncellenmiş Kısım */
+/* styles.css - ÃƒÆ’Ã†â€™Ãƒâ€¦Ã¢â‚¬Å“rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼n KartlarÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± ÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§in GÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ncellenmiÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸ KÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±sÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±m */
 .product-card {
     display: flex;
     flex-direction: column; /* Dikey hizalama */
     align-items: center;
-    width: 250px; /* Sabit genişlik */
+    width: 250px; /* Sabit geniÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸lik */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -812,42 +952,42 @@ button[type="submit"]:hover {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    transition: transform 0.3s ease; /* Hover etkisi için */
-    height: auto; /* Kartın yüksekliğini otomatik bırak */
-    min-height: 350px; /* Kartların minimum yüksekliği */
+    transition: transform 0.3s ease; /* Hover etkisi iÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§in */
+    height: auto; /* KartÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±n yÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ksekliÃƒÆ’Ã¢â‚¬ÂÃƒâ€¦Ã‚Â¸ini otomatik bÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±rak */
+    min-height: 350px; /* KartlarÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±n minimum yÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ksekliÃƒÆ’Ã¢â‚¬ÂÃƒâ€¦Ã‚Â¸i */
 }
 
 .product-card img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    max-height: 250px; /* Daha büyük görsel yüksekliği */
+    max-height: 250px; /* Daha bÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼yÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼k gÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶rsel yÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ksekliÃƒÆ’Ã¢â‚¬ÂÃƒâ€¦Ã‚Â¸i */
     margin-bottom: 15px;
 }
 
 .product-info {
-    flex: 1; /* Boşlukları doldurmak için esneme */
+    flex: 1; /* BoÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸luklarÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± doldurmak iÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§in esneme */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alt kısma hizalama */
+    justify-content: flex-end; /* Alt kÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±sma hizalama */
 }
 
 .product-info h3 {
-    margin: 15px 0 10px; /* Başlık boşlukları */
+    margin: 15px 0 10px; /* BaÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸lÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±k boÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸luklarÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± */
     font-size: 18px;
 }
 
 .product-info p {
     font-size: 14px;
     color: #555;
-    margin: 0 0 10px; /* Alt boşluk */
+    margin: 0 0 10px; /* Alt boÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€¦Ã‚Â¸luk */
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Hover üzerinde yukarı kalkma */
+    transform: translateY(-5px); /* Hover ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼zerinde yukarÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± kalkma */
 }
 
-/* Ürün Detay Sayfası İçin Ayar - product-details sınıfının düzenlenmesi */
+/* ÃƒÆ’Ã†â€™Ãƒâ€¦Ã¢â‚¬Å“rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼n Detay SayfasÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â± ÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§in Ayar - product-details sÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±nÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±fÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±nÃƒÆ’Ã¢â‚¬ÂÃƒâ€šÃ‚Â±n dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼zenlenmesi */
 .product-details {
     max-width: 900px;
     margin: 0 auto;
@@ -863,4 +1003,425 @@ button[type="submit"]:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+}
+
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        align-items: center; /* Dikey olarak hizala */
+        justify-content: space-between; /* Hamburger menÃƒÂ¼ ve logoyu iki tarafa yerleÃ…Å¸tir */
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border-radius: 15px;
+    }
+    .hamburger-menu {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .product-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+    }
+    .product-card {
+        flex: 0 0 80%;
+        margin-right: 10px;
+    }
+    .product-list::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* Updated and Optimized Mobile-Specific Styles */
+@media (max-width: 768px) {
+    /* Navbar Adjustments for Mobile */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        position: relative;
+        z-index: 1000; /* Navbar'ın üstte kalması için */
+    }
+
+    .hamburger-menu {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Daha estetik bir görünüm için gölge eklendi */
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out; /* Açılma animasyonu */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+        transition: background-color 0.3s ease; /* Hover efekti için */
+    }
+
+    .nav-links a:hover {
+        background-color: #575757;
+    }
+
+    /* Product Cards Adjustments for Mobile */
+    .product-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .product-card {
+        flex: 0 0 80%;
+        margin-right: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Kartlara gölge eklendi */
+        background-color: #fff;
+    }
+
+    .product-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Fade-in Animation for Nav Links */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Compact and Updated CSS for Hamburger Menu and Navbar */
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+    position: relative; /* For absolute positioning of nav-links */
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex: 1; /* Center align logo */
+}
+
+.logo img {
+    max-height: 40px;
+    margin: auto;
+}
+
+.hamburger-menu {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    z-index: 1001; /* Ensure menu icon stays on top */
+}
+
+/* Nav Links Styles */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute; /* Place directly below the navbar */
+    top: 60px; /* Align just below the navbar */
+    left: 0;
+    width: 100%; /* Full width of the navbar */
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it appears above content */
+    border-radius: 0 0 10px 10px; /* Rounded corners for better appearance */
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #575757; /* Hover effect */
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Body Overflow Control */
+body {
+    overflow-x: hidden;
+}
+
+
+/* Nav Links Styles with Sliding and Fading Effects */
+.nav-links {
+    display: flex; /* Ensure visibility for animation */
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-100%); /* Initially hide above viewport */
+    opacity: 0; /* Start fully transparent */
+    visibility: hidden; /* Prevent interaction when hidden */
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0s linear 0.4s; /* Smooth open and close */
+}
+
+.nav-links.active {
+    transform: translateY(0); /* Slide into view */
+    opacity: 1; /* Fade into view */
+    visibility: visible; /* Ensure interaction */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Remove delay for opening */
+}
+
+/* Individual Link Styles */
+.nav-links li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #575757; /* Hover background */
+    color: #fff; /* Hover text color */
+}
+/* Blog Sayfası Genel Ayarlar */
+.blog-header {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-header h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Blog Kartları */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-content h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.blog-content .read-more {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #007bff;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.blog-content .read-more:hover {
+    color: #0056b3;
+    border-bottom-color: #0056b3;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* Blog Detay Sayfası için Genel Düzeltmeler */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Yatay kaydırmayı engeller */
+}
+
+.content {
+    margin: 0 auto; /* Ortalar */
+    max-width: 1200px; /* İçeriği genişlik sınırı içinde tutar */
+    padding: 20px; /* İçerik için boşluk bırakır */
+    box-sizing: border-box; /* Padding'in genişliğe eklenmesini önler */
+    line-height: 1.6; /* Satır yüksekliği ekler */
+}
+
+img {
+    max-width: 100%; /* Görsellerin taşmasını engeller */
+    height: auto; /* Oranlı ölçekleme */
+    display: block; /* Resmin altındaki boşluğu kaldırır */
+    margin: 15px auto; /* Ortalar ve boşluk ekler */
+}
+
+.blog-content h1, .blog-content p, .blog-content ul {
+    margin: 0 auto; /* Ortalar */
+    max-width: 100%; /* Taşmayı engeller */
+    word-wrap: break-word; /* Uzun kelimeleri kırar */
+}
+
+.blog-content h1 {
+    font-size: 32px; /* Başlık boyutu */
+    margin-bottom: 15px; /* Alt boşluk */
+    color: #333; /* Renk */
+    text-align: center; /* Başlığı ortala */
+}
+
+.blog-content p {
+    font-size: 18px; /* Yazı boyutu */
+    color: #555; /* Metin rengi */
+    line-height: 1.8; /* Satır yüksekliği */
+    text-align: justify; /* Metni iki yana hizala */
+    margin-bottom: 20px; /* Alt boşluk */
+}
+
+.blog-content ul {
+    padding-left: 30px; /* Listeye sol boşluk ekler */
+    margin-bottom: 20px; /* Alt boşluk bırakır */
+}
+
+.blog-content ul li {
+    margin-bottom: 10px; /* Liste öğeleri arasında boşluk */
+    font-size: 18px; /* Liste yazı boyutu */
+    color: #555; /* Metin rengi */
+}
+
+/* Mobil Cihazlara Özel (768px ve altı) */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px; /* Küçük ekranlarda içerik boşluğunu azalt */
+    }
+
+    .blog-content h1 {
+        font-size: 24px; /* Küçük ekranlarda başlık boyutunu küçült */
+        text-align: center;
+    }
+
+    .blog-content p {
+        font-size: 14px; /* Küçük ekranlarda yazı boyutunu küçült */
+        line-height: 1.6;
+    }
+
+    .blog-content ul li {
+        font-size: 14px; /* Liste boyutunu küçült */
+    }
 }
